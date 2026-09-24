@@ -1,0 +1,1 @@
+girl.jpg nomli rasmni shu papkaga joylang. O'yinda shu rasm qizning avatari sifatida chiqadi.

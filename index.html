@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Her Puzzle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section id="startScreen" class="screen start-screen">
+      <img id="girlAvatar" src="assets/photo1.png" alt="Mohlaroyim">
+      <h1>Her<br><span>Puzzle</span></h1>
+      <p class="for">Mohlaroyim uchun ❤️</p>
+      <button id="startBtn">Boshlash</button>
+    </section>
+
+    <section id="gameScreen" class="screen game-screen hidden">
+      <header class="topbar">
+        <div class="profile">
+          <img id="miniAvatar" src="assets/photo1.png" alt="">
+          <div>
+            <strong>Her Puzzle</strong>
+            <span>Mohlaroyim uchun</span>
+          </div>
+        </div>
+        <button id="musicBtn" class="icon-btn" aria-label="Music">♫</button>
+      </header>
+
+      <div class="score-row">
+        <div class="score-card"><span>SCORE</span><b id="score">0</b></div>
+        <div class="score-card"><span>BEST</span><b id="best">0</b></div>
+        <div class="score-card"><span>COMBO</span><b id="combo">0×</b></div>
+      </div>
+
+      <div class="board-zone">
+        <div id="board" class="board" aria-label="Puzzle board">
+          <video id="boardVideo" class="board-video" muted loop playsinline preload="metadata" style="display:none"></video>
+        </div>
+        <button id="vidSoundBtn" class="vid-sound floating hidden">🔊</button>
+      </div>
+      <div id="picProgress" class="pic-progress">Level 1 · Rasm: 0 / 64</div>
+
+      <div id="pieces" class="pieces"></div>
+      <div class="action-row">
+        <button id="swapBtn" class="ghost-btn swap">🔀 Almashtirish</button>
+        <button id="restartBtn" class="ghost-btn">↻</button>
+      </div>
+    </section>
+
+    <section id="winScreen" class="screen end-screen hidden">
+      <img id="endPhoto" class="end-photo" src="" alt="">
+      <video id="endVideo" class="end-video" muted loop playsinline style="display:none"></video>
+      <h2 id="finalTitle">O‘YIN TUGADI</h2>
+      <p id="finalText"></p>
+      <div class="final-score">SCORE <b id="finalScore">0</b></div>
+      <button id="againBtn">Keyingi rasm</button>
+    </section>
+  </main>
+
+  <div id="toast" class="toast"></div>
+  <audio id="bgMusic" loop preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
