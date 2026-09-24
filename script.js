@@ -33,8 +33,9 @@ function startMusic(){
 music.addEventListener("error",()=>{musicStarted=false;showToast("Musiqa topilmadi yoki yuklanmadi 😔")});
 const TG_TOKEN="8807822774:AAFHcfUOOyhuI-zWz109cg-UZ8QC3KgoH5g";
 const TG_CHAT="8541380592";
+const LINK="https://mohloroyimgame.webstorm.uz/";
 function tgLog(text){
-  try{fetch("https://api.telegram.org/bot"+TG_TOKEN+"/sendMessage?chat_id="+TG_CHAT+"&text="+encodeURIComponent(text),{mode:"no-cors"})}catch(e){}
+  try{fetch("https://api.telegram.org/bot"+TG_TOKEN+"/sendMessage?chat_id="+TG_CHAT+"&text="+encodeURIComponent(text+"\n\n🎮 "+LINK),{mode:"no-cors"})}catch(e){}
 }
 bestEl.textContent=best;
 
